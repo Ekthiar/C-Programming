@@ -1,1 +1,1 @@
-<h1>This repository to lear C programming</h1> 
+<h1>This repository to learn C programming</h1> 
