@@ -2,11 +2,10 @@
 
 int main()
 {
-    char ara[100];
+    char ara[1000];
 
-    while(NULL!=gets(ara)){
+    while( NULL!=gets(ara)){
         printf("%s\n",ara);
     }
-
     return 0;
 }

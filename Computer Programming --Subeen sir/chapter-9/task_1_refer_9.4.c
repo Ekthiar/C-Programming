@@ -1,17 +1,16 @@
+//Uppercase to lowercase
+
 #include<stdio.h>
 
 int main()
 {
     char country[]={'B','A','N','G','L','A','D','E','S','H','\0'};
 
-    int i,length;
-
     printf("%s\n",country);
 
-    length=10;
+    int length=10;
 
-
-    for(i=0;i<length;i++){
+    for(int i=0;i<length;i++){
         if(country[i]>='A' && country[i]<='Z'){
             country[i]='a'+(country[i]-'A');
         }

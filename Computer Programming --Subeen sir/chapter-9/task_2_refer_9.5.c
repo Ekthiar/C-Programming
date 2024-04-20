@@ -1,21 +1,27 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int string_length(char str[])
+int str_length(char str[])
 {
-    int i=0;
-    while(str[i]!='\0') i++;
+  int i=0;
 
-    return i;
+  while(str[i]!='\0')
+  {
+      i++;
+  }
+  return i;
 }
 
 int main()
 {
-    char str[100];
-    int length;
+  char str[100];
 
-    while(1==scanf("%s",str)){
-        length=string_length(str);
-        printf("length=%d\n",length);
-    }
-    return 0;
+  int length;
+
+  while(NULL !=gets(str))
+  {
+    length=str_length(str);
+    printf("%d\n",length);
+  }
+
+  return 0;
 }

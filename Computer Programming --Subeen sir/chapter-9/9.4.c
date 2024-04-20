@@ -4,19 +4,19 @@ int main()
 {
     char country[]={'B','a','n','g','l','a','d','e','s','h','\0'};
 
-    int i,length;
-
     printf("%s\n",country);
 
-    length=10;
+    int length=10;
 
-    for(i=0;i<length;i++){
-        if(country[i]>='a' && country[i]<='z'){
+    for(int i=0;i<length;i++)
+    {
+        if(country[i]>='a' && country[i]<='z')
+        {
             country[i]='A'+(country[i]-'a');
         }
     }
 
-    printf("%s\n",country);
+    printf("%s",country);
 
     return 0;
 }
