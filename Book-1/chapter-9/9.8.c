@@ -21,7 +21,6 @@ int main()
                 word[j]='A'+(s[i]-'a');
                 j++;
             }
-
             else
             {
                 word[j]=s[i];
