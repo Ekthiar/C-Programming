@@ -3,29 +3,29 @@
 
 int main()
 {
-    char s[1000],ch;
-    int length, is_word_strated,i;
+    char s[1000], word[100];
+    int length, is_word_strated,i,j;
 
     gets(s);
 
     length=strlen(s);
     is_word_strated=0;
 
-    for(i=0;i<length;i++)
+    for(i=0,j=0;i<length;i++)
     {
         if(s[i]>='a' && s[i]<='z')
         {
             if(is_word_strated==0)
             {
                 is_word_strated=1;
-                ch='A'+(s[i]-'a');
-                printf("%c",ch);
-
+                word[j]='A'+(s[i]-'a');
+                j++;
             }
 
             else
             {
-                printf("%c",s[i]);
+                word[j]=s[i];
+                j++;
             }
         }
 
@@ -37,17 +37,30 @@ int main()
             }
             else
             {
-                printf("%c",s[i]);
+                word[j]=s[i];
+                j++;
             }
         }
-
+        else if(s[i]>='0' && s[i]<='9')
+        {
+            if(is_word_strated==0)
+            {
+                is_word_strated=1;
+            }
+            else
+            {
+                word[j]=s[i];
+                j++;
+            }
+        }
         else
         {
             if(is_word_strated==1)
             {
                 is_word_strated=0;
-                printf("\n");
-
+                word[j]='\0';
+                printf("%s\n",word);
+                j=0;
             }
         }
 
